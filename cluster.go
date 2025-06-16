@@ -180,6 +180,7 @@ func getClusterSlots(c conn, timeout time.Duration) clusterslots {
 }
 
 func (c *clusterClient) _refresh() (err error) {
+	log.Printf("[CUSTOM] _refresh %s", time.Now().UTC().Format(time.RFC3339Nano))
 	c.mu.RLock()
 	results := make(chan clusterslots, len(c.conns))
 	pending := make([]conn, 0, len(c.conns))
