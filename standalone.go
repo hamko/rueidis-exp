@@ -5,7 +5,7 @@ import (
 	"math/rand/v2"
 	"time"
 
-	"github.com/redis/rueidis/internal/cmds"
+	"github.com/hamko/rueidis-exp/internal/cmds"
 )
 
 func newStandaloneClient(opt *ClientOption, connFn connFn, retryer retryHandler) (*standalone, error) {

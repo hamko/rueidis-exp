@@ -9,7 +9,7 @@ import (
 	"testing"
 	"time"
 
-	"github.com/redis/rueidis"
+	"github.com/hamko/rueidis-exp"
 )
 
 const testDB = 10

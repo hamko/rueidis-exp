@@ -12,8 +12,8 @@ import (
 	"sync/atomic"
 	"time"
 
-	"github.com/redis/rueidis/internal/cmds"
-	"github.com/redis/rueidis/internal/util"
+	"github.com/hamko/rueidis-exp/internal/cmds"
+	"github.com/hamko/rueidis-exp/internal/util"
 )
 
 func newSentinelClient(opt *ClientOption, connFn connFn, retryer retryHandler) (client *sentinelClient, err error) {
@@ -549,7 +549,7 @@ func newSentinelOpt(opt *ClientOption) *ClientOption {
 	o.ClientName = o.Sentinel.ClientName
 	o.Dialer = o.Sentinel.Dialer
 	o.TLSConfig = o.Sentinel.TLSConfig
-	o.SelectDB = 0 // https://github.com/redis/rueidis/issues/138
+	o.SelectDB = 0 // https://github.com/hamko/rueidis-exp/issues/138
 	return &o
 }
 

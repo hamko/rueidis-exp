@@ -11,7 +11,7 @@ import (
 	"time"
 	"unsafe"
 
-	"github.com/redis/rueidis"
+	"github.com/hamko/rueidis-exp"
 )
 
 type ClientOption struct {

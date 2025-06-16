@@ -8,7 +8,7 @@ import (
 	"strings"
 	"testing"
 
-	"github.com/redis/rueidis"
+	"github.com/hamko/rueidis-exp"
 )
 
 func TestRedisString(t *testing.T) {

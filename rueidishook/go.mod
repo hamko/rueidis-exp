@@ -1,17 +1,17 @@
-module github.com/redis/rueidis/rueidishook
+module github.com/hamko/rueidis-exp/rueidishook
 
 go 1.23.0
 
 toolchain go1.23.4
 
 replace (
-	github.com/redis/rueidis => ../
-	github.com/redis/rueidis/mock => ../mock
+	github.com/hamko/rueidis-exp => ../
+	github.com/hamko/rueidis-exp/mock => ../mock
 )
 
 require (
-	github.com/redis/rueidis v1.0.61
-	github.com/redis/rueidis/mock v1.0.61
+	github.com/hamko/rueidis-exp v1.0.61
+	github.com/hamko/rueidis-exp/mock v1.0.61
 	go.uber.org/mock v0.5.0
 )
 

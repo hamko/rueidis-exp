@@ -1,18 +1,18 @@
-module github.com/redis/rueidis/rueidiscompat
+module github.com/hamko/rueidis-exp/rueidiscompat
 
 go 1.23.0
 
 toolchain go1.23.4
 
-replace github.com/redis/rueidis => ../
+replace github.com/hamko/rueidis-exp => ../
 
-replace github.com/redis/rueidis/mock => ../mock
+replace github.com/hamko/rueidis-exp/mock => ../mock
 
 require (
 	github.com/onsi/ginkgo/v2 v2.22.2
 	github.com/onsi/gomega v1.36.2
-	github.com/redis/rueidis v1.0.61
-	github.com/redis/rueidis/mock v1.0.61
+	github.com/hamko/rueidis-exp v1.0.61
+	github.com/hamko/rueidis-exp/mock v1.0.61
 	go.uber.org/mock v0.5.0
 )
 

@@ -7,8 +7,8 @@ import (
 	"testing"
 	"time"
 
-	"github.com/redis/rueidis"
-	"github.com/redis/rueidis/mock"
+	"github.com/hamko/rueidis-exp"
+	"github.com/hamko/rueidis-exp/mock"
 	"go.uber.org/mock/gomock"
 )
 

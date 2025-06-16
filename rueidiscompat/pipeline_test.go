@@ -35,7 +35,7 @@ import (
 
 	. "github.com/onsi/ginkgo/v2"
 	. "github.com/onsi/gomega"
-	"github.com/redis/rueidis/mock"
+	"github.com/hamko/rueidis-exp/mock"
 	"go.uber.org/mock/gomock"
 )
 

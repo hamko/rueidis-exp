@@ -6,9 +6,9 @@ import (
 	"testing"
 	"time"
 
-	"github.com/redis/rueidis"
-	"github.com/redis/rueidis/mock"
-	"github.com/redis/rueidis/rueidislimiter"
+	"github.com/hamko/rueidis-exp"
+	"github.com/hamko/rueidis-exp/mock"
+	"github.com/hamko/rueidis-exp/rueidislimiter"
 	"go.uber.org/mock/gomock"
 )
 

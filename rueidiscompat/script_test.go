@@ -30,7 +30,7 @@ import (
 	"context"
 	"fmt"
 
-	"github.com/redis/rueidis"
+	"github.com/hamko/rueidis-exp"
 )
 
 func ExampleScript() {

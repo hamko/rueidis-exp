@@ -1,13 +1,13 @@
-module github.com/redis/rueidis/rueidisprob
+module github.com/hamko/rueidis-exp/rueidisprob
 
 go 1.23.0
 
 toolchain go1.23.4
 
-replace github.com/redis/rueidis => ../
+replace github.com/hamko/rueidis-exp => ../
 
 require (
-	github.com/redis/rueidis v1.0.61
+	github.com/hamko/rueidis-exp v1.0.61
 	github.com/twmb/murmur3 v1.1.8
 )
 

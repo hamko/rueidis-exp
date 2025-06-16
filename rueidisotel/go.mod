@@ -1,13 +1,13 @@
-module github.com/redis/rueidis/rueidisotel
+module github.com/hamko/rueidis-exp/rueidisotel
 
 go 1.23.0
 
 toolchain go1.23.4
 
-replace github.com/redis/rueidis => ../
+replace github.com/hamko/rueidis-exp => ../
 
 require (
-	github.com/redis/rueidis v1.0.61
+	github.com/hamko/rueidis-exp v1.0.61
 	go.opentelemetry.io/otel v1.35.0
 	go.opentelemetry.io/otel/metric v1.35.0
 	go.opentelemetry.io/otel/sdk v1.35.0

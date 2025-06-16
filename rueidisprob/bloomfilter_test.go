@@ -8,7 +8,7 @@ import (
 	"strings"
 	"testing"
 
-	"github.com/redis/rueidis"
+	"github.com/hamko/rueidis-exp"
 )
 
 func setupRedis7Cluster() (rueidis.Client, func() error, error) {

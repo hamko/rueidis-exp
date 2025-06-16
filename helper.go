@@ -5,7 +5,7 @@ import (
 	"errors"
 	"time"
 
-	intl "github.com/redis/rueidis/internal/cmds"
+	intl "github.com/hamko/rueidis-exp/internal/cmds"
 )
 
 // MGetCache is a helper that consults the client-side caches with multiple keys by grouping keys within the same slot into multiple GETs

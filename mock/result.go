@@ -11,7 +11,7 @@ import (
 	"time"
 	"unsafe"
 
-	"github.com/redis/rueidis"
+	"github.com/hamko/rueidis-exp"
 )
 
 func Result(val rueidis.RedisMessage) rueidis.RedisResult {

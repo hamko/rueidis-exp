@@ -6,7 +6,7 @@ import (
 	"sync/atomic"
 	"time"
 
-	"github.com/redis/rueidis/internal/cmds"
+	"github.com/hamko/rueidis-exp/internal/cmds"
 )
 
 type singleClient struct {

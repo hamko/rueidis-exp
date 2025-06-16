@@ -10,7 +10,7 @@ import (
 	"testing"
 	"time"
 
-	"github.com/redis/rueidis"
+	"github.com/hamko/rueidis-exp"
 )
 
 func TestNewSlidingBloomFilter(t *testing.T) {

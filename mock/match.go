@@ -4,7 +4,7 @@ import (
 	"fmt"
 	"strings"
 
-	"github.com/redis/rueidis"
+	"github.com/hamko/rueidis-exp"
 	"go.uber.org/mock/gomock"
 )
 

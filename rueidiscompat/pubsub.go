@@ -34,7 +34,7 @@ import (
 	"sync"
 	"time"
 
-	"github.com/redis/rueidis"
+	"github.com/hamko/rueidis-exp"
 )
 
 type PubSub interface {

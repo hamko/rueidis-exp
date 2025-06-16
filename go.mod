@@ -1,4 +1,4 @@
-module github.com/redis/rueidis
+module github.com/hamko/rueidis-exp
 
 go 1.23.0
 

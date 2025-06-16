@@ -13,7 +13,7 @@ import (
 	"time"
 	"unsafe"
 
-	"github.com/redis/rueidis/internal/util"
+	"github.com/hamko/rueidis-exp/internal/util"
 )
 
 const messageStructSize = int(unsafe.Sizeof(RedisMessage{}))
@@ -734,7 +734,7 @@ func (m *RedisMessage) Error() error {
 		return Nil
 	}
 	if m.typ == typeSimpleErr || m.typ == typeBlobErr {
-		// kvrocks: https://github.com/redis/rueidis/issues/152#issuecomment-1333923750
+		// kvrocks: https://github.com/hamko/rueidis-exp/issues/152#issuecomment-1333923750
 		mm := *m
 		mm.setString(strings.TrimPrefix(m.string(), "ERR "))
 		return (*RedisError)(&mm)

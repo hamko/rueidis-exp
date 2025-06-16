@@ -5,8 +5,8 @@ import (
 	"reflect"
 	"time"
 
-	"github.com/redis/rueidis"
-	"github.com/redis/rueidis/internal/cmds"
+	"github.com/hamko/rueidis-exp"
+	"github.com/hamko/rueidis-exp/internal/cmds"
 	"go.uber.org/mock/gomock"
 )
 
