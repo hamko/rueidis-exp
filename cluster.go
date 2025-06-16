@@ -8,6 +8,7 @@ import (
 	"strconv"
 	"sync"
 	"sync/atomic"
+	"log"
 	"time"
 
 	"github.com/hamko/rueidis-exp/internal/cmds"
@@ -1331,17 +1332,23 @@ func (c *clusterClient) Close() {
 }
 
 func (c *clusterClient) shouldRefreshRetry(err error, ctx context.Context) (addr string, mode RedirectMode) {
+	log.Printf("[CUSTOM] shouldRefreshRetry %s mode = %d", time.Now().UTC().Format(time.RFC3339Nano), mode)
+
 	if err != nil && err != Nil && err != ErrDoCacheAborted && atomic.LoadUint32(&c.stop) == 0 {
 		if err, ok := err.(*RedisError); ok {
 			if addr, ok = err.IsMoved(); ok {
 				mode = RedirectMove
+				log.Printf("[CUSTOM] %s mode = %d (IsMoved)", time.Now().UTC().Format(time.RFC3339Nano), mode)
 			} else if addr, ok = err.IsAsk(); ok {
 				mode = RedirectAsk
+				log.Printf("[CUSTOM] %s mode = %d (IsAsk)", time.Now().UTC().Format(time.RFC3339Nano), mode)
 			} else if err.IsClusterDown() || err.IsTryAgain() || err.IsLoading() {
 				mode = RedirectRetry
+				log.Printf("[CUSTOM] %s mode = %d (IsClusterDown/TryAgain/Loading)", time.Now().UTC().Format(time.RFC3339Nano), mode)
 			}
 		} else if ctx.Err() == nil {
 			mode = RedirectRetry
+			log.Printf("[CUSTOM] %s mode = %d (NetworkError or other)", time.Now().UTC().Format(time.RFC3339Nano), mode)
 		}
 		if mode != RedirectNone {
 			c.lazyRefresh()
